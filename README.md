@@ -11,3 +11,7 @@ Static responsive landing page for a dental clinic, recreated from a reference s
 ## Live Preview
 
 Netlify: https://brightsmile-dental-kmarkovska.netlify.app
+
+## Webpage screenshot
+
+<img width="439" height="968" alt="image" src="https://github.com/user-attachments/assets/3c0cac32-3981-4ffe-8c89-1a1aaed41104" />
