@@ -431,6 +431,14 @@ img {
   color: var(--primary);
 }
 
+.fee-note > span {
+  display: block;
+}
+
+.fee-note-break {
+  display: block;
+}
+
 .fee-note strong {
   font-weight: 800;
 }
