@@ -420,7 +420,7 @@ img {
   margin: 44px 0 0;
   padding: 18px 30px;
   color: #708191;
-  background: #dffbf5;
+  background: var(--soft);
   border-radius: 5px;
   font-size: 12px;
   font-weight: 600;
