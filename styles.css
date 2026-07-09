@@ -413,7 +413,7 @@ img {
 
 .fee-note {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 10px;
   min-height: 76px;
@@ -429,6 +429,8 @@ img {
 
 .fee-note i {
   color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .fee-note > span {
