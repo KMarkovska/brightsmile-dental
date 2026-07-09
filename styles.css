@@ -339,8 +339,7 @@ img {
 .popular {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 54px;
   min-width: 132px;
   height: 22px;
   display: inline-flex;
