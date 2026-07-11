@@ -1,5 +1,6 @@
 const backTop = document.querySelector(".back-top");
 const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+const topLinks = Array.from(document.querySelectorAll('a[href="#top"]'));
 
 const navTargets = navLinks.map((link) => {
   const id = link.getAttribute("href");
@@ -33,15 +34,35 @@ function updateActiveNav() {
   setActiveNav(activeId);
 }
 
+function scrollToTop() {
+  setActiveNav("#top");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+topLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    scrollToTop();
+  });
+});
+
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    setActiveNav(link.getAttribute("href"));
+  link.addEventListener("click", (event) => {
+    const id = link.getAttribute("href");
+
+    if (id === "#top") {
+      event.preventDefault();
+      scrollToTop();
+      return;
+    }
+
+    setActiveNav(id);
   });
 });
 
 backTop.addEventListener("click", () => {
-  setActiveNav("#top");
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  scrollToTop();
 });
 
 window.addEventListener("scroll", updateActiveNav, { passive: true });
